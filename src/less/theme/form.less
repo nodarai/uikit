@@ -48,6 +48,19 @@
 @form-label-color:                              @global-emphasis-color;
 @form-label-font-size:                          @global-small-font-size;
 
+@form-horizontal-label-width-xsmall:            60px;
+@form-horizontal-label-width-small:             100px;
+@form-width-medium:                             215px;
+@form-horizontal-label-width-large:             230px;
+@form-horizontal-label-width-xlarge:            260px;
+
+
+@form-width-xxxsmall:                           50px;
+@form-width-xxsmall:                            60px;
+@form-width-xsmall:                             65px;
+
+
+
 
 // Component
 // ========================================================================
@@ -83,6 +96,21 @@
     border-style: @form-blank-focus-border-style;
 }
 
+// Width modifiers (`uk-input`, `uk-select` and `uk-textarea`)
+// ==========================================================================
+
+/*
+ * Fixed widths
+ * Same widths for mini sized `input` and `select` elements
+ */
+
+.uk-form-width-xxxsmall { width: @form-width-xxsmall; }
+.uk-form-width-xxsmall { width: @form-width-xxsmall; }
+.uk-form-width-xsmall { width: @form-width-xsmall; }
+/* Override width in Component */
+select.uk-form-width-xsmall { width: @form-width-xsmall; }
+
+
 
 // Radio and checkbox
 // ========================================================================
@@ -110,14 +138,13 @@
 .hook-form-legend() {}
 
 
-// Label
+// Label sizes
 // ========================================================================
 
-.hook-form-label() {
-    color: @form-label-color;
-    font-size: @form-label-font-size;
-}
-
+.uk-form-label-xsmall { width: @form-horizontal-label-width-xsmall !important; }
+.uk-form-label-small { width: @form-horizontal-label-width-small !important; }
+.uk-form-label-large { width: @form-horizontal-label-width-large !important; }
+.uk-form-label-xlarge { width: @form-horizontal-label-width-xlarge !important; }
 
 // Layout
 // ========================================================================

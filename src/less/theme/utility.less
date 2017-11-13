@@ -6,12 +6,35 @@
 
 // Variables
 // ========================================================================
-
+@box-shadow-bottom-background:                       @sncf-cool-gray-11;
 
 // Panel
 // ========================================================================
 
 .hook-panel-scrollable() {}
+
+
+/* Box-shadow
+ ========================================================================== */
+
+.uk-box-shadow-small-full { box-shadow: @global-small-box-shadow-full; }
+.uk-box-shadow-medium-full { box-shadow: @global-medium-box-shadow-full; }
+.uk-box-shadow-large-full { box-shadow: @global-large-box-shadow-full; }
+.uk-box-shadow-xlarge-full { box-shadow: @global-xlarge-box-shadow-full; }
+
+/*
+ * Hover
+ */
+
+[class*='uk-box-shadow-hover'] {
+    -webkit-transition: box-shadow @box-shadow-duration ease-in-out;
+    transition: box-shadow @box-shadow-duration ease-in-out;
+}
+
+.uk-box-shadow-hover-small-full:hover { box-shadow: @global-small-box-shadow-full; }
+.uk-box-shadow-hover-medium-full:hover { box-shadow: @global-medium-box-shadow-full; }
+.uk-box-shadow-hover-large-full:hover { box-shadow: @global-large-box-shadow-full; }
+.uk-box-shadow-hover-xlarge-full:hover { box-shadow: @global-xlarge-box-shadow-full; }
 
 
 // Box-shadow bottom
